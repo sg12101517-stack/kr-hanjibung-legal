@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>한지붕 노트 — 원룸·오피스텔 입주 하자 기록 &amp; 관리비 정산 노트</title>
+  <style>
+    :root {
+      --navy: #0b1220;
+      --slate: #162238;
+      --mint: #10b981;
+      --mint-soft: #ecfdf5;
+      --blue: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+      line-height: 1.65;
+    }
+    header {
+      background: linear-gradient(135deg, var(--navy), var(--slate));
+      color: #ffffff;
+      padding: 28px 20px 38px;
+      border-bottom: 4px solid var(--mint);
+    }
+    .wrap { max-width: 900px; margin: 0 auto; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-bottom: 22px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+    nav a.active, nav a:hover {
+      color: #ffffff;
+      background: rgba(16, 185, 129, 0.28);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.18);
+      color: #6ee7b7;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    h1 { margin: 0 0 8px; font-size: 30px; line-height: 1.3; }
+    .subtitle { margin: 0; color: #cbd5e1; font-size: 15px; }
+    main { padding: 30px 20px 52px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+    .card h2, .card h3 {
+      margin-top: 0;
+      color: var(--navy);
+      font-size: 18px;
+    }
+    .pill {
+      display: inline-block;
+      background: var(--mint-soft);
+      color: #047857;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    .notice {
+      background: var(--mint-soft);
+      border: 1px solid #a7f3d0;
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-size: 14px;
+      color: #065f46;
+    }
+    a.link { color: #059669; font-weight: 700; text-decoration: none; }
+    a.link:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 24px 20px 40px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="active" href="index.html">서비스 소개</a>
+        <a href="privacy-policy.html">개인정보 처리방침</a>
+        <a href="terms.html">이용약관 및 EULA</a>
+        <a href="support.html">고객 지원</a>
+      </nav>
+      <span class="badge">100% 오프라인 · 회원가입 없음 · 광고 없음</span>
+      <h1>한지붕 노트 — 입주 하자 기록·관리비 정산</h1>
+      <p class="subtitle">원룸·오피스텔·빌라 입주 첫날의 사진 증거부터 룸메이트 월간 공과금 분담 기록까지, 내 기기 안에 안전하게 남기는 한국형 생활 유틸리티 앱입니다. (Bundle ID: <code>kr.hanjibung.livinglog</code>)</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="grid">
+        <div class="card">
+          <span class="pill">6대 구역 입주 점검</span>
+          <h3>현관·거실·주방·욕실·창호·옵션가전</h3>
+          <p>입주 시 기준 상태와 퇴거 시 상태를 1:1로 비교하여 입주 전부터 있던 기존 하자를 명확히 구분해 기록합니다.</p>
+        </div>
+        <div class="card">
+          <span class="pill">비파괴 벡터 사진 봉인</span>
+          <h3>빨간 원·화살표 &amp; SHA-256 타임스탬프</h3>
+          <p>원본 사진 데이터를 손상시키지 않고 벡터 마킹만 별도로 겹쳐 표시하며, 한국 표준시(KST)와 SHA-256 지문을 자동 기록합니다.</p>
+        </div>
+        <div class="card">
+          <span class="pill">관리비·공과금 생활 기록</span>
+          <h3>1/N 균등 · 맞춤 비율 &amp; 카톡 복사</h3>
+          <p>매월 발생하는 관리비·전기·가스·수도·인터넷 요금을 룸메이트와 나눈 뒤 카카오톡·문자 안내문으로 한 번에 복사할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>임차인·임대인 쌍방 서명 및 A4 한국어 PDF 확인서</h2>
+        <p>점검을 마친 후 화면에서 임차인과 임대인(또는 관리인)이 직접 자필 서명을 남기고, 모든 항목과 KST 타임스탬프, SHA-256 봉인 해시가 정리된 A4 규격 한국어 하자 확인서 PDF 및 CSV 파일로 오프라인 내보내기를 지원합니다.</p>
+        <div class="notice">
+          <strong>개인 기록 도구 안내:</strong> 한지붕 노트는 개인 및 룸메이트 간의 입주 상태 기록과 생활 관리비 정산 메모를 돕는 유틸리티/라이프스타일 앱입니다. 금융 송금·대출 서비스나 법률 자문, 공인 감정서 기능을 제공하지 않습니다.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>공식 문서 및 지원 링크</h2>
+        <ul>
+          <li><a class="link" href="privacy-policy.html">개인정보 처리방침 (100% 기기 내 저장 · 수집 데이터 없음)</a></li>
+          <li><a class="link" href="terms.html">이용약관 및 한지붕 Pro 구독 안내</a></li>
+          <li><a class="link" href="support.html">자주 묻는 질문 (FAQ) 및 고객 문의</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 한지붕 노트 (Hanjibung Note) &middot; 문의: <a class="link" href="mailto:sg12101517@gmail.com">sg12101517@gmail.com</a>
+  </footer>
+</body>
+</html>

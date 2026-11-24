@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개인정보 처리방침 — 한지붕 노트</title>
+  <style>
+    :root {
+      --navy: #0b1220;
+      --slate: #162238;
+      --mint: #10b981;
+      --mint-soft: #ecfdf5;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+      line-height: 1.65;
+    }
+    header {
+      background: linear-gradient(135deg, var(--navy), var(--slate));
+      color: #ffffff;
+      padding: 26px 20px 32px;
+      border-bottom: 4px solid var(--mint);
+    }
+    .wrap { max-width: 820px; margin: 0 auto; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+    nav a.active, nav a:hover {
+      color: #ffffff;
+      background: rgba(16, 185, 129, 0.28);
+    }
+    h1 { margin: 0 0 6px; font-size: 26px; }
+    .subtitle { margin: 0; color: #cbd5e1; font-size: 14px; }
+    main { padding: 28px 20px 48px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+    .card h2 { margin-top: 0; font-size: 18px; color: #059669; }
+    .highlight {
+      background: var(--mint-soft);
+      border: 1px solid #a7f3d0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: #065f46;
+      font-size: 14px;
+    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    a.link { color: #059669; font-weight: 700; text-decoration: none; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 22px 20px 36px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a href="index.html">서비스 소개</a>
+        <a class="active" href="privacy-policy.html">개인정보 처리방침</a>
+        <a href="terms.html">이용약관 및 EULA</a>
+        <a href="support.html">고객 지원</a>
+      </nav>
+      <h1>개인정보 처리방침</h1>
+      <p class="subtitle">한지붕 노트 (Hanjibung Note) &middot; Bundle ID: <code>kr.hanjibung.livinglog</code> &middot; 시행일: 2026년 11월 23일</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="card">
+        <div class="highlight">
+          <strong>개인정보 비수집 원칙 (Data Not Collected):</strong> 한지붕 노트는 사용자의 개인정보, 입주 현장 사진, 거주지 도로명 주소, 서명 데이터, 관리비 정산 내역을 개발자의 서버나 외부 제3자에게 수집·전송·저장·판매하지 않습니다.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>1. 100% 기기 내 오프라인 로컬 저장</h2>
+        <p>한지붕 노트에서 생성된 모든 주거지 프로필, 입주·퇴거 체크리스트, 벡터 주석 좌표, 임차인·임대인 자필 서명, KST·SHA-256 해시 기록 및 관리비 장부는 오직 사용자의 iPhone 또는 iPad 기기 내부 저장공간에만 보관됩니다.</p>
+        <ul>
+          <li>별도의 회원가입, 로그인 또는 클라우드 계정 연동이 없습니다.</li>
+          <li>제3자 광고 SDK, 사용자 행동 분석 SDK, 위치 추적 모듈을 포함하지 않습니다.</li>
+          <li>사용자는 앱 내 <strong>설정</strong> 탭에서 언제든지 전체 JSON 백업을 내보내거나 데이터를 초기화할 수 있습니다.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>2. 카메라 및 사진 보관함 접근 권한</h2>
+        <p>한지붕 노트는 원룸·오피스텔 입주 하자 상태를 촬영하거나 기존 사진을 불러오기 위해 <strong>카메라</strong>(<code>NSCameraUsageDescription</code>) 및 <strong>사진 보관함</strong>(<code>NSPhotoLibraryUsageDescription</code>) 권한을 요청합니다.</p>
+        <p>촬영·선택된 원본 사진은 기기 내 앱 샌드박스 영역에 별도 저장되며, 사용자가 직접 공유 시트를 통해 내보내기 전까지는 절대 기기 외부로 전송되지 않습니다.</p>
+      </div>
+
+      <div class="card">
+        <h2>3. 인앱 결제 및 구독 처리 (Apple StoreKit 2)</h2>
+        <p><strong>한지붕 Pro</strong> 유료 업그레이드(평생 소장, 연간 패스, 월간 패스) 결제는 Apple의 공식 App Store (StoreKit 2) 인프라를 통해서만 처리됩니다. 앱 개발자는 사용자의 신용카드 번호나 결제 계좌 정보에 접근하지 않습니다.</p>
+      </div>
+
+      <div class="card">
+        <h2>4. 오프라인 파일 내보내기 (PDF · CSV · JSON)</h2>
+        <p>A4 한국어 하자 확인서 PDF, 점검/관리비 CSV 및 JSON 백업 파일은 사용자의 기기 내부에서 즉시 생성되며, 사용자가 iOS 공유 시트(ShareLink)를 통해 카카오톡, 파일 앱, 이메일 등으로 직접 공유할 때에만 외부로 전달됩니다.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. 개인정보 보호 문의처</h2>
+        <p>본 개인정보 처리방침에 대한 문의 사항은 <a class="link" href="mailto:sg12101517@gmail.com">sg12101517@gmail.com</a>으로 연락해 주시기 바랍니다.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 한지붕 노트 &middot; <a class="link" href="terms.html">이용약관</a> &middot; <a class="link" href="support.html">고객 지원</a>
+  </footer>
+</body>
+</html>
